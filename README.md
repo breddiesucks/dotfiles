@@ -20,7 +20,3 @@ Editor: nvim
 App launcher: rofi
 
 Wallpaper: Rei being a G in the wesside
-
-
-
-![alt text](https://github.com/breddie-normie/dotfiles/blob/main/screenshot.png?raw=true)
