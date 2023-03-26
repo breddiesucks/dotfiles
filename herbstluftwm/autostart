@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # this is a simple config for herbstluftwm
+# this config made by breddie, is supposed to be used with xfce
 
 hc() {
     herbstclient "$@"
@@ -10,10 +11,6 @@ hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
 
-picom &
-lxsession &
-nm-applet &
-polybar &
 feh --bg-scale wallpaper/wallpaper8.jpg
 
 # remove all existing keybindings
@@ -104,12 +101,22 @@ hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
 
+# unminimize windows; especially video games
+hc keybind $Mod-Control-m \
+   substitute FOCUS "tags.focus.name" \
+   foreach CLIENT clients. \
+     sprintf MINATT "%c.minimized" CLIENT \
+     sprintf TAGATT "%c.tag" CLIENT and \
+       , compare MINATT "=" "true" \
+       , compare TAGATT "=" FOCUS \
+       , set_attr MINATT false
+
 # rofi
 hc keybind $Mod-space spawn ~/.config/rofi/launchers/type-3/launcher.sh
 
 # brightness
-hc keybind XF86MonBrightnessUp spawn brightnessctl s +5%
-hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
+# hc keybind XF86MonBrightnessUp spawn brightnessctl s +5%
+# hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
 
 # playerctl
 hc keybind $Mod-Left spawn playerctl -p spotify previous
