@@ -21,7 +21,7 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-q spawn ~/.config/rofi/powermenu/type-4/powermenu.sh
+hc keybind $Mod-Shift-q spawn xfce-session-login
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
@@ -112,7 +112,7 @@ hc keybind $Mod-Control-m \
        , set_attr MINATT false
 
 # rofi
-hc keybind $Mod-space spawn ~/.config/rofi/launchers/type-3/launcher.sh
+hc keybind $Mod-space spawn rofi -show combi
 
 # brightness
 # hc keybind XF86MonBrightnessUp spawn brightnessctl s +5%
