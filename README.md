@@ -19,6 +19,5 @@ Editor: nvim
 
 App launcher: rofi
 
-Wallpaper: Rei being a G in the wesside
+![image](https://github.com/breddie-normie/dotfiles/assets/127048853/ead05103-934a-47af-abe4-e11d03d41799)
 
-![image](https://user-images.githubusercontent.com/127048853/227787358-37112254-2e5c-4c4e-97f8-0ae542073477.png)
