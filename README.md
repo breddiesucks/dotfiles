@@ -9,7 +9,7 @@ WM: Herbstluftwm
 
 Terminal: Alacritty
 
-Shell: fish
+Shell: zsh
 
 Panel: Xfce-panel (manually modified in GUI)
 
