@@ -19,4 +19,4 @@ Editor: nvim
 
 App launcher: rofi
 
-![image](https://github.com/breddie-normie/dotfiles/assets/127048853/75de1b17-fccf-4255-8d6b-32f1a1ca307b)
+![image](https://github.com/breddie-normie/dotfiles/assets/127048853/fc23ed4c-7cf9-4aac-9d2a-a9f95ae3355e)
