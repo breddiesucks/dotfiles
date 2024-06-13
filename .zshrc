@@ -1,4 +1,5 @@
 # straightout yoinked Luke Smith's zshrc and modifying few parts to my preference
+# don't forget to get zsh-autosuggestions and zsh-syntax-highlighting
 
 # Enable colors and change prompt:
 autoload -U colors && colors
