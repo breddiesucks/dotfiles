@@ -1,0 +1,26 @@
+Breddie's Dotfiles
+==================
+
+These dotfiles are made with Arch/Arch-based distributions in mind. I prefer Arch for its volatile package management and overall simplicity and straightforwardness. If you are going to use these dotfiles for other distributions, it would work fine, but just remember to satiate the pre-requisites.
+
+Secondly, this is made specifically for Xfce+Herbstluftwm, oriented to my personal workflow. Keep that in your head.
+
+Dotfile Prerequisites:
+---------------------
+
+Xfce
+Herbstluftwm
+Vim
+Alacritty
+Picom
+dunst
+zsh
+rofi
+mpv
+
+Setup:
+-----
+
+breeze breeze-gtk breeze-icons qt5ct feh ttf-jetbrains-mono noto-sans-cjk noto-sans-emoji fileroller vim
+
+On a fresh Arch install, first of all, setup a DE, most preferrably Xfce, since we are going to build off it. LightDM Desktop Manager is preferred. After entering the DE, make sure you put your HerbstluftWM, Picom, dunst and rofi dotfiles into ~/.config. Then, head to Settings Manager -> Sessions and Startups and remove XfDesktop and XfWM from running on startup and rather replace it with herbstluft and picom. Exit the session and re-enter for see how the WM change nets out. After that, you are free to remove xfdesktop and xfwm if you please.
