@@ -5,6 +5,11 @@
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)
 
+;; putting this upfront to resolve some issues between Emacs and Herbstluftwm
+(setq frame-resize-pixelwise t)
+(setq frame-inhibit-implied-resize t)
+
+
 ;; pulicha maava thooki veliya kadaasidungada
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -51,15 +56,20 @@
 (require 'evil)
 (evil-mode 1)
 
-;; lsp-mode - JetBrains and VSCode fans can suck a fucking dick
-(straight-use-package 'lsp-mode)
-(straight-use-package 'lsp-ui)
-(straight-use-package 'company-mode)
+;; which-key - juices the best out of Emacs' key bindings
+(straight-use-package 'which-key)
 
-(setq lsp-keymap-prefix "s-l")
+(require 'which-key)
+(which-key-mode)
 
-(require 'lsp-mode)
-(add-hook '-mode-hook #'lsp)
+;; lsp-mode - ain't gonna use it for the time being, but I would return to it soon }:)
+;; (straight-use-package 'lsp-mode)
+;; (straight-use-package 'lsp-ui)
+;; (straight-use-package 'company-mode)
+
+;;(setq lsp-keymap-prefix "s-l")
+;;(require 'lsp-mode)
+;;(add-hook 'prog-mode-hook #'lsp)
 
 ;; doom-themes - yeah, I want a less obnoxious color scheme
 (straight-use-package 'doom-themes)
@@ -107,4 +117,3 @@ Leopard on my right, yeah")
 ;; (straight-use-package 'consult)
 ;; (straight-use-package 'marginalia)
 ;; (straight-use-package 'magit)
-;; (straight-use-package 'spacious-padding)
