@@ -14,6 +14,9 @@
 ;; adding fancy numbers so you don't go insane
 (global-display-line-numbers-mode 1)
 
+;; text warp - you WILL need it
+ (add-hook 'text-mode-hook 'visual-line-mode)
+
 ;; setting my favorite font coz why the hell not?
 (set-face-attribute 'default nil :font "JetBrains Mono" :height 150)
 
@@ -81,8 +84,27 @@
 
 (spacious-padding-mode 1)
 
+;; emacs-dashboard - pimp up your rig
+(straight-use-package 'dashboard)
+
+(require 'dashboard)
+(dashboard-setup-startup-hook)
+
+(setq dashboard-banner-logo-title "The Soft Parade has begun
+Listen to the Engines Hum
+People out here to have some fun
+A cobra on my left
+Leopard on my right, yeah")
+
+(setq dashboard-center-content t)
+(setq dashboard-vertically-center-content t)
+(setq dashboard-show-shortcuts nil)
+(setq dashboard-startup-banner "~/.config/emacs/elysium.jpg")
+(setq dashboard-items '((recents   . 5)))
+
 ;; other package which I am planning to add
 ;; (straight-use-package 'vertico)
 ;; (straight-use-package 'consult)
 ;; (straight-use-package 'marginalia)
 ;; (straight-use-package 'magit)
+;; (straight-use-package 'spacious-padding)
