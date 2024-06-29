@@ -15,7 +15,7 @@ Panel: Xfce-panel (manually modified in GUI)
 
 Compositor: Picom
 
-Editor: nvim
+Editor: vim/emacs
 
 App launcher: rofi
 
