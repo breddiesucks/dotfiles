@@ -20,13 +20,16 @@
 (global-display-line-numbers-mode 1)
 
 ;; text warp - you WILL need it
- (add-hook 'text-mode-hook 'visual-line-mode)
+(add-hook 'text-mode-hook 'visual-line-mode)
 
 ;; setting my favorite font coz why the hell not?
 (set-face-attribute 'default nil :font "JetBrains Mono" :height 150)
 
 ;; prelim disabling package.el
 (setq package-enable-at-startup nil)
+
+;; electric pair mode so it feels satisfying
+(electric-pair-mode t)
 
 ;; who doesn't love some transparency every once in a while?
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
@@ -51,16 +54,22 @@
 
 ;; the following lines makes sure the package is installed and enable them recursively
 
+;; use-package coz it's what the cool kids use
+(straight-use-package 'use-package)
+;; This is only needed once, near the top of the file
+(eval-when-compile
+  (require 'use-package))
+
 ;; e-VI-l mode - a Crazy Mohan joke but necessary for sanity
 (straight-use-package 'evil)
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+     :config (evil-mode 1))
 
 ;; which-key - juices the best out of Emacs' key bindings
 (straight-use-package 'which-key)
 
-(require 'which-key)
-(which-key-mode)
+(use-package which-key
+  :config (which-key-mode))
 
 ;; lsp-mode - ain't gonna use it for the time being, but I would return to it soon }:)
 ;; (straight-use-package 'lsp-mode)
@@ -75,42 +84,50 @@
 (straight-use-package 'doom-themes)
 
 (require 'doom-themes)
-
-(setq doom-themes-enable-bold t
-      doom-themes-enable-italic t)
-
-(load-theme 'doom-city-lights t)
+(use-package doom-themes
+  :config
+  (setq doom-themes-enable-bold t
+	doom-themes-enable-italic t)
+  (load-theme 'doom-city-lights t))
 
 ;; spacious padding for more AESTHETIC
 (straight-use-package 'spacious-padding)
 
-(setq spacious-padding-widths
+(use-package spacious-padding
+  :config
+  (setq spacious-padding-widths
       '( :internal-border-width 15
          :header-line-width 4
          :mode-line-width 6
          :tab-width 4
          :right-divider-width 30
          :scroll-bar-width 8))
-
-(spacious-padding-mode 1)
+  (spacious-padding-mode 1))
 
 ;; emacs-dashboard - pimp up your rig
 (straight-use-package 'dashboard)
 
-(require 'dashboard)
-(dashboard-setup-startup-hook)
+(use-package dashboard
+  :config
+  (dashboard-setup-startup-hook)
 
-(setq dashboard-banner-logo-title "The Soft Parade has begun
-Listen to the Engines Hum
-People out here to have some fun
-A cobra on my left
-Leopard on my right, yeah")
+  (setq dashboard-banner-logo-title "My head is my only home until it rains")
 
-(setq dashboard-center-content t)
-(setq dashboard-vertically-center-content t)
-(setq dashboard-show-shortcuts nil)
-(setq dashboard-startup-banner "~/.config/emacs/elysium.jpg")
-(setq dashboard-items '((recents   . 5)))
+  (setq dashboard-center-content t)
+  (setq dashboard-vertically-center-content t)
+  (setq dashboard-show-shortcuts nil)
+  (setq dashboard-startup-banner "~/.config/emacs/elysium.jpg")
+  (setq dashboard-items '((recents   . 5)))
+  (setq dashboard-startupify-list '(dashboard-insert-banner
+                                  dashboard-insert-newline
+                                  dashboard-insert-banner-title
+                                  dashboard-insert-newline
+                                  dashboard-insert-navigator
+                                  dashboard-insert-newline
+                                  dashboard-insert-init-info
+                                  dashboard-insert-items
+                                  dashboard-insert-newline)))
+
 
 ;; other package which I am planning to add
 ;; (straight-use-package 'vertico)
