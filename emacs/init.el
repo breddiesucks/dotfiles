@@ -5,12 +5,10 @@
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)
 
-;; putting this upfront to resolve some issues between Emacs and Herbstluftwm
-(setq frame-resize-pixelwise t)
-(setq frame-inhibit-implied-resize t)
+;; ui improvement for the better
+(setq use-dialog-box nil)
 
-
-;; pulicha maava thooki veliya kadaasidungada
+;; pulicha maava thooki veliya kadaasungada
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
@@ -71,15 +69,6 @@
 (use-package which-key
   :config (which-key-mode))
 
-;; lsp-mode - ain't gonna use it for the time being, but I would return to it soon }:)
-;; (straight-use-package 'lsp-mode)
-;; (straight-use-package 'lsp-ui)
-;; (straight-use-package 'company-mode)
-
-;;(setq lsp-keymap-prefix "s-l")
-;;(require 'lsp-mode)
-;;(add-hook 'prog-mode-hook #'lsp)
-
 ;; doom-themes - yeah, I want a less obnoxious color scheme
 (straight-use-package 'doom-themes)
 
@@ -90,10 +79,42 @@
 	doom-themes-enable-italic t)
   (load-theme 'doom-city-lights t))
 
+;; Vertico coz the command minibuffer needs serious ergonomic changes
+(straight-use-package 'vertico)
+
+(use-package vertico
+  :config
+  (vertico-mode 1))
+
+;; Consult for seamless buffer navigation and minibuffer QoL improvement
+(straight-use-package 'consult)
+
+(use-package consult
+  :bind
+  ("C-x b" . consult-buffer))
+
+;; marginalia coz well, im dumb dumb
+(straight-use-package 'marginalia)
+
+(use-package marginalia
+  :config
+  (marginalia-mode 1))
+
+;; orderless coz fuzzy search is necessary
+(straight-use-package 'orderless)
+
+(use-package orderless
+  :config
+  (setq completion-styles '(orderless basic))
+  (setq completetion-category-overrides '((file (styles basic partial-completion)))))
+
 ;; spacious padding for more AESTHETIC
 (straight-use-package 'spacious-padding)
 
 (use-package spacious-padding
+  :init
+  (setq frame-resize-pixelwise t)
+  (setq frame-inhibit-implied-resize t)
   :config
   (setq spacious-padding-widths
       '( :internal-border-width 15
@@ -111,12 +132,12 @@
   :config
   (dashboard-setup-startup-hook)
 
-  (setq dashboard-banner-logo-title "My head is my only home until it rains")
+  (setq dashboard-banner-logo-title "Lost in a Roman Wilderness of pain")
 
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
   (setq dashboard-show-shortcuts nil)
-  (setq dashboard-startup-banner "~/.config/emacs/elysium.jpg")
+  (setq dashboard-startup-banner "~/.config/emacs/doors.jpg")
   (setq dashboard-items '((recents   . 5)))
   (setq dashboard-startupify-list '(dashboard-insert-banner
                                   dashboard-insert-newline
@@ -130,7 +151,5 @@
 
 
 ;; other package which I am planning to add
-;; (straight-use-package 'vertico)
-;; (straight-use-package 'consult)
-;; (straight-use-package 'marginalia)
+;; orderless - better completion mechanic
 ;; (straight-use-package 'magit)
