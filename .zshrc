@@ -16,7 +16,7 @@ autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)		# Include hidden files.
+#_comp_options+=(globdots)		# Include hidden files.
 
 # vi mode
 bindkey -v
@@ -50,29 +50,14 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
-
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
-
 # My aliases
-alias vim="nvim"
+alias ls="ls -l"
+alias vim='echo -ne "\e[1 q"; vim' # to prevent zsh cursor setting cannibalize on my vim cursor (and I prefer block cursor)
 
 # Genesis
-cowsay "Welcome Back to Artix, Breddie
+cowsay ' "Who are you who do not know your history?" - Ulysses, Fallout: New Vegas"
 
-rc-service to start daemons. rc-update to add daemons."
+rc-service to start daemons. rc-update to add daemons.'
 
 # Load zsh-syntax-highlighting; should be last.
 # REMEMBER TO INSTALL zsh-syntax-highlighting and zsh-autosuggestions

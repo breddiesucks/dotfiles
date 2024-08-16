@@ -18,7 +18,7 @@
 (global-display-line-numbers-mode 1)
 
 ;; text warp - you WILL need it
-(add-hook 'text-mode-hook 'visual-line-mode)
+(set-default 'truncate-lines t)
 
 ;; setting my favorite font coz why the hell not?
 (set-face-attribute 'default nil :font "JetBrains Mono" :height 150)
@@ -63,11 +63,10 @@
 (use-package evil
      :config (evil-mode 1))
 
-;; which-key - juices the best out of Emacs' key bindings
-(straight-use-package 'which-key)
-
-(use-package which-key
-  :config (which-key-mode))
+;; I need a reliable key binding to toggle word wrapping
+(use-package visual-line
+  :bind
+  ("C-x v" . visual-line-mode))
 
 ;; doom-themes - yeah, I want a less obnoxious color scheme
 (straight-use-package 'doom-themes)
@@ -84,7 +83,11 @@
 
 (use-package vertico
   :config
-  (vertico-mode 1))
+  (vertico-mode 1)
+  :bind (:map vertico-map
+	      ("C-j" . vertico-next)
+	      ("C-k" . vertico-previous)
+	      ("C-f" . vertico-exit)))
 
 ;; Consult for seamless buffer navigation and minibuffer QoL improvement
 (straight-use-package 'consult)
