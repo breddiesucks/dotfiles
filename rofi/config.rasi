@@ -1,9 +1,9 @@
 /** over-written from Eric Murphy's dots **/
 
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
-  display-combi: "Spit your shit:";
+  display-drun: "";
+  display-window: "Open Window:";
+  display-combi: "Open: ";
   drun-display-format: "{name}";
   font: "JetBrainsMono Nerd Font Medium 12";
   modi: "combi,window,run,drun";

@@ -29,6 +29,12 @@
 ;; electric pair mode so it feels satisfying
 (electric-pair-mode t)
 
+;; I can see how resourceful auto-saving can be, but they are rather bothersome rn
+(setq auto-save-default nil)
+
+;; Just use a VSC, baka-BAAAKA
+(setq make-backup-files nil)
+
 ;; who doesn't love some transparency every once in a while?
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
 (add-to-list 'default-frame-alist '(alpha 85 85))
@@ -142,7 +148,7 @@
   (setq dashboard-vertically-center-content t)
   (setq dashboard-show-shortcuts nil)
   (setq dashboard-startup-banner "~/.config/emacs/busydude.jpg")
-  (setq dashboard-items '((recents   . 5)))
+  (setq dashboard-items '((recents   . 1)))
   (setq dashboard-startupify-list '(dashboard-insert-banner
                                   dashboard-insert-newline
                                   dashboard-insert-banner-title
