@@ -21,7 +21,8 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-q spawn xfce-session-login
+hc keybind $Mod-Shift-q spawn xfce4-session-logout
+hc keybind $Mod-Shift-w spawn xflock4
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
@@ -112,7 +113,8 @@ hc keybind $Mod-Control-m \
        , set_attr MINATT false
 
 # rofi
-hc keybind $Mod-space spawn rofi -show combi
+hc keybind $Mod-space spawn rofi -show drun
+hc keybind $Mod-Shift-space spawn rofi -show window
 
 # brightness
 # hc keybind XF86MonBrightnessUp spawn brightnessctl s +5%
@@ -122,6 +124,11 @@ hc keybind $Mod-space spawn rofi -show combi
 hc keybind $Mod-Left spawn playerctl -p spotify previous
 hc keybind $Mod-Down spawn playerctl -p spotify play-pause
 hc keybind $Mod-Right spawn playerctl -p spotify next
+
+# playerctl universal
+# hc keybind $Mod-Left spawn playerctl previous
+# hc keybind $Mod-Down spawn playerctl play-pause
+# hc keybind $Mod-Right spawn playerctl next
 
 # flameshot
 hc keybind $Mod-Shift-s spawn flameshot gui
@@ -140,7 +147,7 @@ hc set frame_border_width 0
 hc set show_frame_decorations 'focused_if_multiple'
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
-hc set frame_gap 12
+hc set frame_gap 8
 
 hc attr theme.title_height 15
 hc attr theme.title_when never
@@ -173,7 +180,7 @@ done
 hc attr theme.tiling.outer_width 1
 hc attr theme.background_color '#141414'
 
-hc set window_gap 1
+hc set window_gap 0
 hc set frame_padding 0
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings off
