@@ -6,9 +6,15 @@ configuration {
   display-combi: "Open: ";
   drun-display-format: "{name}";
   font: "JetBrainsMono Nerd Font Medium 12";
-  modi: "combi,window,run,drun";
+  //modi: "combi,window,run,drun";
+  modi: "window,drun";
   combi-modi: "window,drun";
   show-icons: true;
+  
+  kb-row-next: "Tab";
+  kb-row-previous: "Tab+Shift";
+  kb-mode-next: "Alt+l";
+  kb-mode-previous: "Alt+h";
 }
 
 @theme "/dev/null"

@@ -24,7 +24,7 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q spawn xfce4-session-logout
 hc keybind $Mod-Shift-w spawn xflock4
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-Shift-c close
+hc keybind $Mod-Shift-c close_or_remove
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 
 # basic movement in tiling and floating mode
@@ -45,7 +45,7 @@ hc keybind $Mod-Shift-l     shift right
 hc keybind $Mod-u       split   bottom  0.5
 hc keybind $Mod-o       split   right   0.5
 # let the current frame explode into subframes
-hc keybind $Mod-Control-space split explode
+# hc keybind $Mod-Control-space split explode
 
 # resizing frames and floating clients
 resizestep=0.02
@@ -84,8 +84,8 @@ hc keybind $Mod-Shift-p pseudotile toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
-hc keybind $Mod-Shift-space                                                           \
-            or , and . compare tags.focus.curframe_wcount = 2                   \
+hc keybind $Mod-Ctrl-space                                                           \
+             or , and . compare tags.focus.curframe_wcount = 2                   \
                      . cycle_layout +1 vertical horizontal max vertical grid    \
                , cycle_layout +1
 
@@ -114,7 +114,7 @@ hc keybind $Mod-Control-m \
 
 # rofi
 hc keybind $Mod-space spawn rofi -show drun
-hc keybind $Mod-Shift-space spawn rofi -show window
+# hc keybind $Mod-Shift-space spawn rofi -show window
 
 # brightness
 # hc keybind XF86MonBrightnessUp spawn brightnessctl s +5%
@@ -135,6 +135,7 @@ hc keybind $Mod-Shift-s spawn flameshot gui
 
 # picom toggle
 hc keybind $Mod-p spawn ~/.config/picom/toggle.sh
+# hc keybind $Mod-p spawn pseudotile toggle
 
 # theme
 hc attr theme.tiling.reset 1
@@ -147,7 +148,7 @@ hc set frame_border_width 0
 hc set show_frame_decorations 'focused_if_multiple'
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
-hc set frame_gap 8
+hc set frame_gap 9
 
 hc attr theme.title_height 15
 hc attr theme.title_when never
@@ -180,7 +181,7 @@ done
 hc attr theme.tiling.outer_width 1
 hc attr theme.background_color '#141414'
 
-hc set window_gap 0
+hc set window_gap 1
 hc set frame_padding 0
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings off
