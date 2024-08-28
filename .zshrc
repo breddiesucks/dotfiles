@@ -52,14 +52,15 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # My aliases
 alias ls="ls -l"
-alias vim='echo -ne "\e[1 q"; vim' # to prevent zsh cursor setting cannibalize on my vim cursor (and I prefer block cursor)
 
 # Genesis
 cowsay ' "Who are you who do not know your history?" - Ulysses, Fallout: New Vegas"
 
-rc-service to start daemons. rc-update to add daemons.'
+rc-service to start daemons. rc-update to add daemons. scp to transfer files with openssh.'
 
 # Load zsh-syntax-highlighting; should be last.
 # REMEMBER TO INSTALL zsh-syntax-highlighting and zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+[ -f "/home/breddie/.ghcup/env" ] && . "/home/breddie/.ghcup/env" # ghcup-env

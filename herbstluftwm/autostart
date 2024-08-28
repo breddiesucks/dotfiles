@@ -11,7 +11,7 @@ hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
 
-feh --bg-fill wallpaper/eva.jpg
+feh --bg-fill wallpaper/nerv01.jpg
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -134,7 +134,7 @@ hc keybind $Mod-Right spawn playerctl -p spotify next
 hc keybind $Mod-Shift-s spawn flameshot gui
 
 # picom toggle
-hc keybind $Mod-p spawn ~/.config/picom/toggle.sh
+# hc keybind $Mod-p spawn ~/.config/picom/toggle.sh
 # hc keybind $Mod-p spawn pseudotile toggle
 
 # theme
@@ -189,7 +189,12 @@ hc set mouse_recenter_gap 0
 
 # rules
 hc unrule -F
-#hc rule class=XTerm tag=3 # move all xterms to tag 3
+hc rule class=firefox tag=1
+# hc rule tag=2 floating=on # for the games
+hc rule class=steam tag=2 floating=off # but I want steam intact
+# hc rule not class=steam tag=2 floating=on # WIP floating game launcher mechanism
+hc rule class=Emacs tag=3 focus=on
+hc rule class=Spotify tag=4
 hc rule focus=on # normally focus new clients
 hc rule floatplacement=smart
 #hc rule focus=off # normally do not focus new clients

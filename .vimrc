@@ -27,3 +27,15 @@ runtime! archlinux.vim
 " text wrap
 :set wrap
 :set linebreak
+
+" Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm).
+"   for now, this is the most reliable way to resolve the cursor issue
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"

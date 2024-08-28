@@ -3,7 +3,7 @@
 configuration {
   display-drun: "";
   display-window: "Open Window:";
-  display-combi: "Open: ";
+  display-drun: "Open: ";
   drun-display-format: "{name}";
   font: "JetBrainsMono Nerd Font Medium 12";
   //modi: "combi,window,run,drun";
@@ -11,10 +11,9 @@ configuration {
   combi-modi: "window,drun";
   show-icons: true;
   
-  kb-row-next: "Tab";
-  kb-row-previous: "Tab+Shift";
-  kb-mode-next: "Alt+l";
-  kb-mode-previous: "Alt+h";
+  kb-element-next: "J";
+  kb-element-previous: "K";
+  kb-mode-next: "Tab";
 }
 
 @theme "/dev/null"
