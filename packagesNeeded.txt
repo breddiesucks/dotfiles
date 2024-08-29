@@ -37,4 +37,5 @@ Lelouch-tier Cheesy Plans
 Learn -> C++
 	Haskell
 	Rust
-	Ada
+	Fortran
+	Erlang

@@ -54,9 +54,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 alias ls="ls -l"
 
 # Genesis
-cowsay ' "Who are you who do not know your history?" - Ulysses, Fallout: New Vegas"
-
-rc-service to start daemons. rc-update to add daemons. scp to transfer files with openssh.'
+fastfetch
 
 # Load zsh-syntax-highlighting; should be last.
 # REMEMBER TO INSTALL zsh-syntax-highlighting and zsh-autosuggestions

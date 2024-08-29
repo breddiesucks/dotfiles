@@ -141,14 +141,14 @@
   :config
   (dashboard-setup-startup-hook)
 
-  (setq dashboard-banner-logo-title "Imagine using a proprietary IDE instead of Emacs *snig*")
+  (setq dashboard-banner-logo-title "breddiesucks's Emacs")
   (setq dashboard-image-banner-max-height 430)
   (setq dashboard-image-banner-max-width 557)
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
   (setq dashboard-show-shortcuts nil)
-  (setq dashboard-startup-banner "~/.config/emacs/busydude.jpg")
-  (setq dashboard-items '((recents   . 1)))
+  (setq dashboard-startup-banner "~/.config/emacs/avellonehard.jpg")
+  (setq dashboard-items '((recents   . 5)))
   (setq dashboard-startupify-list '(dashboard-insert-banner
                                   dashboard-insert-newline
                                   dashboard-insert-banner-title
