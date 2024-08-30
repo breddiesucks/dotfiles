@@ -2,6 +2,10 @@
 ;; Discord - breddie_sucks
 ;; github - https://www.github.com/breddie-normie
 
+;; some personal reminders so I can prevent myself from straying too far:
+;; 1. rofi for playerctl?
+;; 2. steam float or floating in that tag
+
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)
 
@@ -82,7 +86,7 @@
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-city-lights t))
+  (load-theme 'doom-tokyo-night t))
 
 ;; Vertico coz the command minibuffer needs serious ergonomic changes
 (straight-use-package 'vertico)
@@ -147,7 +151,7 @@
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
   (setq dashboard-show-shortcuts nil)
-  (setq dashboard-startup-banner "~/.config/emacs/avellonehard.jpg")
+  (setq dashboard-startup-banner "~/.config/emacs/avellonesoft.jpg")
   (setq dashboard-items '((recents   . 5)))
   (setq dashboard-startupify-list '(dashboard-insert-banner
                                   dashboard-insert-newline

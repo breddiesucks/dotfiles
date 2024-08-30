@@ -9,9 +9,9 @@ hc() {
 
 hc emit_hook reload
 
-xsetroot -solid '#5A8E3A'
+xsetroot -solid '#1a1b26'
 
-feh --bg-fill wallpaper/nerv01.jpg
+feh --bg-fill wallpaper/nervrei.png
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -69,8 +69,8 @@ for i in "${!tag_names[@]}" ; do
 done
 
 # cycle through tags
-hc keybind $Mod-period use_index +1 --skip-visible
-hc keybind $Mod-comma  use_index -1 --skip-visible
+# hc keybind $Mod-period use_index +1 --skip-visible
+# hc keybind $Mod-comma  use_index -1 --skip-visible
 
 # layouting
 hc keybind $Mod-r remove
@@ -135,7 +135,6 @@ hc keybind $Mod-Right spawn playerctl -p spotify next
 hc keybind $Mod-Shift-s spawn flameshot gui
 
 # picom toggle
-# hc keybind $Mod-p spawn ~/.config/picom/toggle.sh
 # hc keybind $Mod-p spawn pseudotile toggle
 
 # theme
@@ -143,22 +142,22 @@ hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
 hc set frame_border_active_color '#222222cc'
 hc set frame_border_normal_color '#101010cc'
-hc set frame_bg_normal_color '#565656aa'
+hc set frame_bg_normal_color '#32344a00'
 hc set frame_bg_active_color '#00000000'
 hc set frame_border_width 0
 hc set show_frame_decorations 'focused_if_multiple'
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
-hc set frame_gap 9
+hc set frame_gap 10
 
 hc attr theme.title_height 15
 hc attr theme.title_when never
-hc attr theme.title_font 'Dejavu Sans:pixelsize=12'  # example using Xft
+hc attr theme.title_font 'JetBrains Mono:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
-hc attr theme.title_depth 3  # space below the title's baseline
-hc attr theme.active.color '#345F0Cef'
-hc attr theme.title_color '#ffffff'
-hc attr theme.normal.color '#323232dd'
+hc attr theme.title_depth 1  # space below the title's baseline
+hc attr theme.active.color '#acb0d0d9'
+hc attr theme.title_color '#e5e9f0d9'
+hc attr theme.normal.color '#444b61a8'
 hc attr theme.urgent.color '#7811A1dd'
 hc attr theme.tab_color '#1F1F1Fdd'
 hc attr theme.active.tab_color '#2B4F0Add'
@@ -169,7 +168,7 @@ hc attr theme.inner_width 1
 hc attr theme.inner_color black
 hc attr theme.border_width 0
 hc attr theme.floating.border_width 0
-hc attr theme.floating.outer_width 1
+hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color black
 hc attr theme.active.inner_color '#789161'
 hc attr theme.urgent.inner_color '#9A65B0'
@@ -179,10 +178,10 @@ for state in active urgent normal ; do
     hc substitute C theme.${state}.inner_color \
         attr theme.${state}.outer_color C
 done
-hc attr theme.tiling.outer_width 1
-hc attr theme.background_color '#141414'
+hc attr theme.tiling.outer_width 0
+hc attr theme.background_color '#444b6a'
 
-hc set window_gap 1
+hc set window_gap 0
 hc set frame_padding 0
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings off
@@ -190,10 +189,9 @@ hc set mouse_recenter_gap 0
 
 # rules
 hc unrule -F
+hc floating tag=2
 hc rule class=firefox tag=1
-# hc rule tag=2 floating=on # for the games
 hc rule class=steam tag=2 floating=off # but I want steam intact
-# hc rule not class=steam tag=2 floating=on # WIP floating game launcher mechanism
 hc rule class=Emacs tag=3 focus=on
 hc rule class=Spotify tag=4
 hc rule focus=on # normally focus new clients

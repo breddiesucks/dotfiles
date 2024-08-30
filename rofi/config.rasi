@@ -1,7 +1,6 @@
 /** over-written from Eric Murphy's dots **/
 
 configuration {
-  display-drun: "";
   display-window: "Open Window:";
   display-drun: "Open: ";
   drun-display-format: "{name}";
@@ -19,12 +18,12 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #171d2366;
-  bg-alt: #171d2366;
-  bg-selected: #171d2399;
+  bg: #1a1b2666;
+  bg-alt: #1a1b2680;
+  bg-selected: #1a1b2666;
 
-  fg: #fafafa99;
-  fg-alt: #fafafa66;
+  fg: #e5e9f080;
+  fg-alt: #e5e9f066;
 
   
   border: 0;
@@ -46,6 +45,7 @@ element {
 }
 
 element selected {
+  background-color: transparent;
   text-color: @fg;
   background-color: @bg-selected;
 }
@@ -57,7 +57,7 @@ element-text {
 }
 
 element-icon {
-  size: 14;
+  size: 16;
   padding: 0 10 0 0;
   background-color: transparent;
 }
@@ -71,6 +71,7 @@ entry {
 inputbar {
   children: [prompt, entry];
   background-color: @bg;
+  background-color: transparent;
 }
 
 listview {
@@ -86,6 +87,7 @@ mainbox {
 
 prompt {
   enabled: true;
+  font: "JetBrainsMono Nerd Font Bold 12";
   padding: 12 0 0 12;
   background-color: @bg-alt;
   text-color: @fg;
