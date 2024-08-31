@@ -122,7 +122,7 @@ hc keybind $Mod-space spawn rofi -show drun
 # hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
 
 # playerctl
-hc keybind $Mod-Left spawn playerctl -p spotify previous
+hc keybind $Mod-Left spawn playerctl -p spotify previous 
 hc keybind $Mod-Down spawn playerctl -p spotify play-pause
 hc keybind $Mod-Right spawn playerctl -p spotify next
 
@@ -133,6 +133,12 @@ hc keybind $Mod-Right spawn playerctl -p spotify next
 
 # flameshot
 hc keybind $Mod-Shift-s spawn flameshot gui
+
+# pamixer
+hc keybind XF86AudioRaiseVolume spawn pactl set-sink-volume @DEFAULT_SINK@ +5%
+hc keybind XF86AudioLowerVolume spawn pactl set-sink-volume @DEFAULT_SINK@ -5%
+hc keybind XF86AudioMute spawn pactl set-sink-mute @DEFAULT_SINK@ toggle
+hc keybind XF86AudioMicMute spawn pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # picom toggle
 # hc keybind $Mod-p spawn pseudotile toggle
