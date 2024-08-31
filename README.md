@@ -3,7 +3,7 @@ My dotfiles
 
 WM: Herbstluftwm
 
-Terminal: Alacritty
+Terminal: Alacritty (under Xfce)
 
 Shell: zsh
 
