@@ -20,6 +20,9 @@ runtime! archlinux.vim
 " for the funny numbers on the side
 :set number
 
+" colors which doesn't bleach my eyes
+" set termguicolors
+
 " fancy ass shit
 :filetype plugin on
 :syntax on

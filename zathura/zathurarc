@@ -1,46 +1,37 @@
-# not mine, refer the original repo
-# Lighthaus Color theme for Zathura
-# GIT: https://github.com/lighthaus-theme/zathura
+# Tokyo Night color scheme for Zathura.
+# Original color scheme: https://github.com/enkia/tokyo-night-vscode-theme
+# Provided for Zathura by https://github.com/CondensedMilk7
+# Copy these lines into your ~/.config/zathura/zathurarc
 
-set recolor true
+set default-bg                  "#1a1b26"
+set default-fg                  "#a9b1d6"
 
-# Lighthaus Colors:
+set statusbar-fg                "#a9b1d6"
+set statusbar-bg                "#24283b"
 
-set notification-error-bg       "#FC2929" 
-set notification-error-fg       "#18191E" 
-set notification-warning-bg     "#E25600" 
-set notification-warning-fg     "#18191E" 
-set notification-bg             "#D68EB2" 
-set notification-fg             "#18191E" 
+set inputbar-bg                 "#1a1b26"
+set inputbar-fg                 "#73daca"
 
-set completion-bg               "#18191E" 
-set completion-fg               "#44B273" 
-set completion-group-bg         "#18191E" 
-set completion-group-fg         "#ED722E" 
-set completion-highlight-bg     "#FFFF00" 
-set completion-highlight-fg     "#21252D" 
+set notification-bg             "#1a1b26"
+set notification-fg             "#73daca"
 
-set index-bg                    "#18191E" 
-set index-fg                    "#44B273" 
-set index-active-bg             "#21252D" 
-set index-active-fg             "#FFFF00" 
+set notification-error-bg       "#1a1b26"
+set notification-error-fg       "#f7768e"
 
-set inputbar-bg                 "#21252D" 
-set inputbar-fg                 "#FFFADE" 
-set statusbar-bg                "#21252D" 
-set statusbar-fg                "#D68EB2" 
+set notification-warning-bg     "#1a1b26"
+set notification-warning-fg     "#f7768e"
 
-set highlight-color             "#D68EB2" 
-set highlight-active-color      "#ff79c6" 
+set highlight-color             "#e0af68"
+set highlight-active-color      "#9aa5ce"
 
-set default-bg                  "#18191E" 
-set default-fg                  "#FFEE79" 
+set completion-bg               "#24283b"
+set completion-fg               "#a9b1d6"
 
-set render-loading              true
-set render-loading-fg           "#FFEE79" 
-set render-loading-bg           "#18191E" 
+set completion-highlight-fg     "#9aa5ce"
+set completion-highlight-bg     "24283b"
 
-# Recolor mode settings
+set recolor-lightcolor          "#16161e"
+set recolor-darkcolor           "#a9b1d6"
 
-set recolor-lightcolor          "#21252D" 
-set recolor-darkcolor           "#FFFADE" 
+set recolor                     "true"
+set recolor-keephue             "false"

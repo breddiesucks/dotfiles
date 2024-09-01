@@ -52,6 +52,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # My aliases
 alias ls="ls -l"
+alias ani-cli="code/mybin/ani-cli/ani-cli"
 
 # Genesis
 fastfetch
@@ -61,4 +62,5 @@ fastfetch
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# compiler variables
 [ -f "/home/breddie/.ghcup/env" ] && . "/home/breddie/.ghcup/env" # ghcup-env
