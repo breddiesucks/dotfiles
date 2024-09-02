@@ -3,6 +3,8 @@
 # Provided for Zathura by https://github.com/CondensedMilk7
 # Copy these lines into your ~/.config/zathura/zathurarc
 
+set selection-clipboard		"clipboard"
+
 set default-bg                  "#1a1b26"
 set default-fg                  "#a9b1d6"
 
@@ -21,8 +23,12 @@ set notification-error-fg       "#f7768e"
 set notification-warning-bg     "#1a1b26"
 set notification-warning-fg     "#f7768e"
 
-set highlight-color             "#e0af68"
-set highlight-active-color      "#9aa5ce"
+# redundant forms - will be waiting for the day when I can change highlight foregrounds
+# set highlight-color             "#e0af68"
+# set highlight-active-color      "#9aa5ce"
+
+set highlight-color		  "rgba(224, 175, 104, 0.5)"
+set highlight-active-color	  "rgba(154, 165, 206, 0.5)"
 
 set completion-bg               "#24283b"
 set completion-fg               "#a9b1d6"
