@@ -1,22 +1,18 @@
 # dotfiles
 My dotfiles
 
-Distro agnostic (just get the required packages alright)
-
-
-
 WM: Herbstluftwm
 
-Terminal: Alacritty
+Terminal: Alacritty (under Xfce)
 
 Shell: zsh
 
-Panel: Xfce-panel (manually modified in GUI)
+Panel: Polybar (I will return to xfce-panel as soon as I have the patience to hand-tune it to my comfort)
 
 Compositor: Picom
 
-Editor: vim/emacs
+Editor: Emacs (primary) / vim (just-in-case)
 
 App launcher: rofi
 
-![image](https://github.com/breddie-normie/dotfiles/assets/127048853/fc23ed4c-7cf9-4aac-9d2a-a9f95ae3355e)
+![image](https://github.com/breddiesucks/dotfiles/blob/main/showoff.jpg)
