@@ -63,4 +63,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # compiler variables
+
 [ -f "/home/breddie/.ghcup/env" ] && . "/home/breddie/.ghcup/env" # ghcup-env

@@ -2,9 +2,10 @@
 ;; Discord - breddie_sucks
 ;; github - https://www.github.com/breddie-normie
 
-;; some personal reminders so I can prevent myself from straying too far:
 ;; 1. rofi for playerctl?
 ;; 2. steam float or floating in that tag
+;; 3. Guix for management of compiler/toolchains and how it itegrates with the main machine
+;; 4. make for the programs which I prefer to be out of guix
 
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)
@@ -163,7 +164,4 @@
                                   dashboard-insert-items
                                   dashboard-insert-newline)))
 
-
-;; other package which I am planning to add
-;; orderless - better completion mechanic
-;; (straight-use-package 'magit)
+(straight-use-package 'haskell-mode)
