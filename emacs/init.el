@@ -2,13 +2,11 @@
 ;; Discord - breddie_sucks
 ;; github - https://www.github.com/breddie-normie
 
-;; 1. rofi for playerctl?
-;; 2. steam float or floating in that tag
-;; 3. clean your PATH
-;; 4. gentoo with xmonad - bdsm and its consequences
-
-;; emacs to-do list
+;; steam float or floating in that tag
+;; clean your PATH
+;; gentoo with xmonad - bdsm and its consequences
 ;; centaur-mode (tabs)
+;; learn rust to bully others with cheesy ass widgets
 
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)

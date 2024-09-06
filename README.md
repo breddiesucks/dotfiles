@@ -1,17 +1,17 @@
 # dotfiles
 My dotfiles
 
-WM: Herbstluftwm
+WM: Herbstluftwm (under Xfce for a reliable setup; and oh I love Herbstluftwm's frame system)
 
-Terminal: Alacritty (under Xfce)
+Terminal: Alacritty
 
 Shell: zsh
 
-Panel: Polybar (I will return to xfce-panel as soon as I have the patience to hand-tune it to my comfort)
+Panel: Polybar (Xfce Panel is well, disenchanting after coming across a lot more customizable panels)
 
 Compositor: Picom
 
-Editor: Emacs (primary) / vim (just-in-case)
+Editor: Emacs (primary) / vim (spare)
 
 App launcher: rofi
 
