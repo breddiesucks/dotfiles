@@ -4,25 +4,24 @@
 
 ;; 1. rofi for playerctl?
 ;; 2. steam float or floating in that tag
-;; 3. Guix for management of compiler/toolchains and how it itegrates with the main machine
-;; 4. make for the programs which I prefer to be out of guix
+;; 3. clean your PATH
+;; 4. gentoo with xmonad - bdsm and its consequences
+
+;; emacs to-do list
+;; centaur-mode (tabs)
 
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)
 
 ;; ui improvement for the better
 (setq use-dialog-box nil)
-
-;; pulicha maava thooki veliya kadaasungada
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (menu-bar-mode -1)
 
-;; adding fancy numbers so you don't go insane
+;; basic syntax necessities
 (global-display-line-numbers-mode 1)
-
-;; text warp - you WILL need it
 (set-default 'truncate-lines t)
 
 ;; setting my favorite font coz why the hell not?
@@ -93,8 +92,8 @@
 (straight-use-package 'vertico)
 
 (use-package vertico
-  :config
-  (vertico-mode 1)
+  :init
+  (vertico-mode)
   :bind (:map vertico-map
 	      ("C-j" . vertico-next)
 	      ("C-k" . vertico-previous)
@@ -136,7 +135,8 @@
          :mode-line-width 6
          :tab-width 4
          :right-divider-width 30
-         :scroll-bar-width 8))
+         :scroll-bar-width 8
+	 :fringe-width 1))
   (spacious-padding-mode 1))
 
 ;; emacs-dashboard - pimp up your rig
@@ -164,4 +164,8 @@
                                   dashboard-insert-items
                                   dashboard-insert-newline)))
 
+;; major modes - they "just" work
 (straight-use-package 'haskell-mode)
+(straight-use-package 'rust-mode)
+(straight-use-package 'slime)
+(straight-use-package 'geiser)

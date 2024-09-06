@@ -65,3 +65,4 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # compiler variables
 
 [ -f "/home/breddie/.ghcup/env" ] && . "/home/breddie/.ghcup/env" # ghcup-env
+export PATH=$PATH:/home/breddie/.spicetify
