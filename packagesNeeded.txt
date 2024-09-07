@@ -14,10 +14,10 @@ Main
 3. dunst
 4. picom
 5. rofi
-6. yay
+6. polybar
 7. ttf-jetbrains-mono
-8. xfce4 - xfce4-panel (searching for a reliable way to get dotfiles/skim the cream)
-9. qt5ct
+8. brightnessctl
+9. pulseaudio
 
 Pleasure
 -----
@@ -27,15 +27,23 @@ zathura
 steam (needs lib32 repo enabled)
 spotify (electron, yuck) / spotify clients
 
+Programs which I have to manually install (gentoo ebuild momen)
+--------------------------------------------------------------
+1. ani-cli - https://github.com/pystardust/ani-cli
+2. spicetify-cli - maybe, maybe not
+
+Rust - Cargo beauties
+---------------------
+1. fclones - cleans junk
+2. eww - nice widgets
+3. ncspot - imma thinkin of switchin
+
 Plans
 ------
-xmonad/xmobar shift alternate setup
-remove the need of xfce-panel (esp for the brightness and volume keys, I don't think the other modules really matter to me)) (or atleast see how to hide it)
+xmonad/xmobar shift alternate setup (learn Haskell properly first)
 
 Lelouch-tier Cheesy Plans
 -------------------------
-Learn -> C++
-	Haskell
-	Rust
-	Fortran
-	Erlang
+Learn -> Haskell
+	 Rust
+	 Lisp
