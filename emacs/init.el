@@ -69,7 +69,7 @@
 ;; e-VI-l mode - a Crazy Mohan joke but necessary for sanity
 (straight-use-package 'evil)
 (use-package evil
-     :config (evil-mode 1))
+  :config (evil-mode 1))
 
 ;; I need a reliable key binding to toggle word wrapping
 (use-package visual-line
@@ -137,6 +137,7 @@
 	 :fringe-width 1))
   (spacious-padding-mode 1))
 
+
 ;; emacs-dashboard - pimp up your rig
 (straight-use-package 'dashboard)
 
@@ -150,7 +151,7 @@
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
   (setq dashboard-show-shortcuts nil)
-  (setq dashboard-startup-banner "~/.config/emacs/avellonesoft.jpg")
+  (setq dashboard-startup-banner "~/.config/emacs/mobiusblud.jpg")
   (setq dashboard-items '((recents   . 5)))
   (setq dashboard-startupify-list '(dashboard-insert-banner
                                   dashboard-insert-newline

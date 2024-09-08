@@ -84,6 +84,7 @@ hc keybind $Mod-Shift-d set_attr clients.focus.decorated toggle
 hc keybind $Mod-Shift-m set_attr clients.focus.minimized true
 hc keybind $Mod-Control-m jumpto last-minimized
 hc keybind $Mod-Shift-p pseudotile toggle
+hc keybind $Mod-Shift-space cycle_layout +1 max vertical
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
@@ -99,8 +100,7 @@ hc mousebind $Mod-Button2 zoom
 hc mousebind $Mod-Button3 resize
 
 # focus
-hc set_layout max
-hc keybind $Mod-BackSpace   cycle_monitor
+# hc keybind $Mod-BackSpace   cycle_monitor
 hc keybind $Mod-Tab         cycle +1
 hc keybind $Mod-Shift-Tab   cycle -1
 # hc keybind $Mod-c cycle
@@ -198,13 +198,13 @@ hc set mouse_recenter_gap 0
 
 # rules
 hc unrule -F
-hc floating tag=2
 hc rule class=firefox tag=1
-hc rule class=steam tag=2 floating=off # but I want steam intact
+hc rule class=steam tag=2
 hc rule class=Emacs tag=3 focus=on
 hc rule class=Spotify tag=4
 hc rule focus=on # normally focus new clients
-hc rule floatplacement=smart
+hc rule floatplacement=center
+#hc rule floatplacement=smart
 #hc rule focus=off # normally do not focus new clients
 # give focus to most common terminals
 #hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
@@ -212,6 +212,12 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 hc rule fixedsize floating=on
+
+# now I can play games in peace and style
+mygames=$(ls ~/.steam/steam/steamapps | grep appmanifest | sed 's/[^0-9]*//g')
+for game in $mygames; do
+    hc rule class=steam_app_$game tag=2 floating=on
+done
 
 hc set tree_style '╾│ ├└╼─┐'
 
