@@ -79,12 +79,26 @@
 ;; doom-themes - yeah, I want a less obnoxious color scheme
 (straight-use-package 'doom-themes)
 
-(require 'doom-themes)
 (use-package doom-themes
   :config
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
   (load-theme 'doom-tokyo-night t))
+
+;; nerd icons - decided to become a sellout for cool shiny icons
+(straight-use-package 'nerd-icons)
+
+(use-package nerd-icons
+  :config
+  (setq nerd-icons-icon-for-dir t)
+  (setq nerd-icons-icon-for-file t))
+
+;; doom-modeline it looks cool, that's all
+(straight-use-package 'doom-modeline)
+
+(use-package doom-modeline
+  :init
+  (doom-modeline-mode 1))
 
 ;; Vertico coz the command minibuffer needs serious ergonomic changes
 (straight-use-package 'vertico)
@@ -118,6 +132,13 @@
   :config
   (setq completion-styles '(orderless basic))
   (setq completetion-category-overrides '((file (styles basic partial-completion)))))
+
+;; nerd fonts but in even more locations
+(straight-use-package 'nerd-icons-completion)
+
+(use-package nerd-icons-completion
+  :config
+  (nerd-icons-completion-mode))
 
 ;; spacious padding for more AESTHETIC
 (straight-use-package 'spacious-padding)
@@ -168,3 +189,7 @@
 (straight-use-package 'rust-mode)
 (straight-use-package 'slime)
 (straight-use-package 'geiser)
+
+;; planning to use: 
+;; flycheck - save me some sanity
+;; (straight-use-package 'flycheck) = immediate syntax warnings, very helpful to your sanity
