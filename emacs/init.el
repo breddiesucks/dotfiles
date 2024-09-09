@@ -109,7 +109,7 @@
   :bind (:map vertico-map
 	      ("C-j" . vertico-next)
 	      ("C-k" . vertico-previous)
-	      ("C-f" . vertico-exit)))
+	      ("M-RET" . vertico-exit-input)))
 
 ;; Consult for seamless buffer navigation and minibuffer QoL improvement
 (straight-use-package 'consult)
@@ -191,5 +191,5 @@
 (straight-use-package 'geiser)
 
 ;; planning to use: 
-;; flycheck - save me some sanity
 ;; (straight-use-package 'flycheck) = immediate syntax warnings, very helpful to your sanity
+;; (straight-use-package 'projectile) = may come useful when I have to manage a zillion orphan undertakings

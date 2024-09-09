@@ -23,13 +23,14 @@ Pleasure
 -----
 playerctl
 mpv
-zathura
+zathura - (use ctrl z when you wanna read anything which has more than just black and white)
 steam (needs lib32 repo enabled)
 spotify (electron, yuck) / spotify clients
 
 Programs which I have to manually install (gentoo ebuild momen)
 --------------------------------------------------------------
 1. ani-cli - https://github.com/pystardust/ani-cli
+2. mangal - https://github.com/metafates/mangal?tab=readme-ov-file
 2. spicetify-cli - maybe, maybe not
 
 Rust - Cargo beauties
