@@ -1,7 +1,8 @@
 # Tokyo Night color scheme for Zathura.
 # Original color scheme: https://github.com/enkia/tokyo-night-vscode-theme
 # Provided for Zathura by https://github.com/CondensedMilk7
-# Copy these lines into your ~/.config/zathura/zathurarc
+
+# don't forget to install zathura-pdf-mupdf and zathura-cb
 
 set selection-clipboard		"clipboard"
 

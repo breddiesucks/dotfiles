@@ -129,10 +129,10 @@ hc keybind $Mod-Left spawn playerctl -p spotify previous
 hc keybind $Mod-Down spawn playerctl -p spotify play-pause
 hc keybind $Mod-Right spawn playerctl -p spotify next
 
-# playerctl universal
-# hc keybind $Mod-Left spawn playerctl previous
-# hc keybind $Mod-Down spawn playerctl play-pause
-# hc keybind $Mod-Right spawn playerctl next
+# playerctl strawberry
+hc keybind $Mod--Shift-Left spawn playerctl -p strawberry previous
+hc keybind $Mod-Shift-Down spawn playerctl -p strawberry play-pause
+hc keybind $Mod-Shift-Right spawn playerctl -p strawberry next
 
 # flameshot
 hc keybind $Mod-Shift-s spawn flameshot gui

@@ -52,7 +52,8 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # My aliases
 alias ls="ls -l"
-alias ani-cli="code/mybin/ani-cli/ani-cli"
+alias ani-cli="~/code/mybin/ani-cli/ani-cli"
+alias manga="~/code/mybin/mangal/mangal"
 
 # Genesis
 fastfetch
