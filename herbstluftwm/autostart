@@ -124,15 +124,10 @@ hc keybind $Mod-space spawn rofi -show drun
 # hc keybind XF86MonBrightnessUp spawn brightnessctl s +5%
 # hc keybind XF86MonBrightnessDown spawn brightnessctl s 5%-
 
-# playerctl
-hc keybind $Mod-Left spawn playerctl -p spotify previous 
-hc keybind $Mod-Down spawn playerctl -p spotify play-pause
-hc keybind $Mod-Right spawn playerctl -p spotify next
-
 # playerctl strawberry
-hc keybind $Mod--Shift-Left spawn playerctl -p strawberry previous
-hc keybind $Mod-Shift-Down spawn playerctl -p strawberry play-pause
-hc keybind $Mod-Shift-Right spawn playerctl -p strawberry next
+hc keybind $Mod-Left spawn playerctl -p strawberry previous
+hc keybind $Mod-Down spawn playerctl -p strawberry play-pause
+hc keybind $Mod-Right spawn playerctl -p strawberry next
 
 # flameshot
 hc keybind $Mod-Shift-s spawn flameshot gui
@@ -201,7 +196,7 @@ hc unrule -F
 hc rule class=firefox tag=1
 hc rule class=steam tag=2
 hc rule class=Emacs tag=3 focus=on
-hc rule class=Spotify tag=4
+hc rule class=strawberry tag=4
 hc rule focus=on # normally focus new clients
 hc rule floatplacement=center
 #hc rule floatplacement=smart

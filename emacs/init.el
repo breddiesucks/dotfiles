@@ -172,7 +172,7 @@
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
   (setq dashboard-show-shortcuts nil)
-  (setq dashboard-startup-banner "~/.config/emacs/mobiusblud.jpg")
+  (setq dashboard-startup-banner "~/.config/emacs/subaru.jpg")
   (setq dashboard-items '((recents   . 5)))
   (setq dashboard-startupify-list '(dashboard-insert-banner
                                   dashboard-insert-newline
