@@ -16,3 +16,4 @@ Editor: Emacs (primary) / vim (spare)
 App launcher: rofi
 
 ![image](https://github.com/breddiesucks/dotfiles/blob/main/showoff.jpg)
+![image](https://github.com/breddiesucks/dotfiles/blob/main/emacsflex.jpg)
