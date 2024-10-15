@@ -2,11 +2,7 @@
 ;; Discord - breddie_sucks
 ;; github - https://www.github.com/breddie-normie
 
-;; steam float or floating in that tag
-;; clean your PATH
-;; gentoo with xmonad - bdsm and its consequences
-;; centaur-mode (tabs)
-;; learn rust to bully others with cheesy ass widgets
+;; get better padding for the tabs
 
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)
@@ -75,6 +71,12 @@
 (use-package visual-line
   :bind
   ("C-x v" . visual-line-mode))
+
+;; tabs save you from going insane
+(use-package tab-bar-mode
+  :init (tab-bar-mode t)
+  :bind
+  ("C-x t k" . tab-close))
 
 ;; doom-themes - yeah, I want a less obnoxious color scheme
 (straight-use-package 'doom-themes)
