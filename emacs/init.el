@@ -2,8 +2,6 @@
 ;; Discord - breddie_sucks
 ;; github - https://www.github.com/breddie-normie
 
-;; get better padding for the tabs
-
 ;; no more crappy startup UI
 (setq inhibit-startup-message t)
 
@@ -72,12 +70,6 @@
   :bind
   ("C-x v" . visual-line-mode))
 
-;; tabs save you from going insane
-(use-package tab-bar-mode
-  :init (tab-bar-mode t)
-  :bind
-  ("C-x t k" . tab-close))
-
 ;; doom-themes - yeah, I want a less obnoxious color scheme
 (straight-use-package 'doom-themes)
 
@@ -125,7 +117,7 @@
 
 (use-package marginalia
   :config
-  (marginalia-mode 1))
+  (marginalia-mode t))
 
 ;; orderless coz fuzzy search is necessary
 (straight-use-package 'orderless)
@@ -140,7 +132,7 @@
 
 (use-package nerd-icons-completion
   :config
-  (nerd-icons-completion-mode))
+  (setq nerd-icons-completion-mode t))
 
 ;; spacious padding for more AESTHETIC
 (straight-use-package 'spacious-padding)
@@ -160,14 +152,12 @@
 	 :fringe-width 1))
   (spacious-padding-mode 1))
 
-
 ;; emacs-dashboard - pimp up your rig
 (straight-use-package 'dashboard)
 
 (use-package dashboard
   :config
   (dashboard-setup-startup-hook)
-
   (setq dashboard-banner-logo-title "breddiesucks's Emacs")
   (setq dashboard-image-banner-max-height 430)
   (setq dashboard-image-banner-max-width 557)
@@ -192,6 +182,22 @@
 (straight-use-package 'slime)
 (straight-use-package 'geiser)
 
-;; planning to use: 
-;; (straight-use-package 'flycheck) = immediate syntax warnings, very helpful to your sanity
-;; (straight-use-package 'projectile) = may come useful when I have to manage a zillion orphan undertakings
+;; cooler tabs
+(straight-use-package 'vim-tab-bar)
+
+(use-package vim-tab-bar
+  :init
+  (vim-tab-bar-mode)
+  :config
+  (setq tab-bar-new-tab-choice "*dashboard*")
+  :bind
+  ("C-x t k" . tab-close)
+  ("C-x t n" . tab-new))
+
+;; flycheck - "Why are we here, just to suffer"
+(straight-use-package 'flycheck)
+
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode))
